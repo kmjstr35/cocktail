@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "189445789804",
+    "project_id": "heiliges-romisches-reich",
+    "storage_bucket": "heiliges-romisches-reich.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189445789804:android:aa91edca46929bd68e2049",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ-tYl_cz0k9gQnQTlLAsTppTnKLm_F04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
