@@ -6,13 +6,16 @@
 
     <Button
         android:id="@+id/searchbutton"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="10dp"
 
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="39dp"
-        android:text="찾아보기"
+
+        android:background="#3F3F3F"
+        android:text="둘러보기"
         app:layout_constraintBottom_toTopOf="@+id/mycocktail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,11 +23,13 @@
 
     <Button
         android:id="@+id/mycocktail"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="306dp"
+        android:background="#3F3F3F"
         android:text="나만의 칵테일"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

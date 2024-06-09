@@ -29,10 +29,11 @@
 
     <Button
         android:id="@+id/add"
+        style="Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
 
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="등록"
         app:layout_constraintBottom_toBottomOf="parent"
