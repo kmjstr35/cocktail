@@ -1,6 +1,8 @@
 package com.example.myapplication.LocalDB
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -19,4 +21,10 @@ interface BaseDao {
 
     @Query("SELECT name FROM basedata WHERE id == :id")
     fun findById(id: Int): String
+    @Query("SELECT * FROM basedata")
+    fun queryAll() : LiveData<List<BaseData>>
+    @Query("SELECT * FROM basedata")
+    fun queryAllWithOutSubscribe() : List<BaseData>
+    @Delete
+    fun Delete(baseData: BaseData)
 }

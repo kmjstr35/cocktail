@@ -74,9 +74,9 @@ class EditCockTail : ComponentActivity() {
                 val name = binding.addName.text.toString()
                 val desc = binding.addShortDesc.text.toString()
                 val recipe = binding.addRecipeText.text.toString()
-                val base = binding.addBaseTxt.text.toString()
+                val baseName = binding.addBaseTxt.text.toString()
 
-                if (name == "" || desc == "" || recipe == "" || base == "") {
+                if (name == "" || desc == "" || recipe == "" || baseName == "") {
                     val toast = Toast(this)
                     toast.duration = Toast.LENGTH_SHORT
                     toast.setText("입력하지 않은 필드가 있습니다")
@@ -106,10 +106,10 @@ class EditCockTail : ComponentActivity() {
                         data.cocktail.desc = desc
                         data.cocktail.recipe = recipe
 
-                        var baseId = database.getBaseDao().searchByName(base)
+                        var baseId = database.getBaseDao().searchByName(baseName)
                         if(baseId == null) {
-                            database.getBaseDao().insert(BaseData(name = base))
-                            baseId = database.getBaseDao().searchByName(base)
+                            database.getBaseDao().insert(BaseData(name = baseName))
+                            baseId = database.getBaseDao().searchByName(baseName)
                         }
 
                         data.cocktail.baseId = baseId!!
