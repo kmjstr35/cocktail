@@ -35,7 +35,6 @@ class RemoteRatingActivity : ComponentActivity() {
 
 
 
-
         binding.mainRecyclerView.layoutManager = LinearLayoutManager(this);
 
         binding.mainRecyclerView.addItemDecoration(
@@ -78,6 +77,7 @@ class RemoteRatingActivity : ComponentActivity() {
                 val spinnerAdapter = ArrayAdapter(this,
                     android.R.layout.simple_spinner_dropdown_item,
                     spinnerSelections)
+
                 spinner.adapter = spinnerAdapter
                 spinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
                     override fun onItemSelected(

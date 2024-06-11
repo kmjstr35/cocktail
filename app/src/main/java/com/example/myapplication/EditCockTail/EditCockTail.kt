@@ -43,6 +43,7 @@ class EditCockTail : ComponentActivity() {
             }
         }
 
+
         binding.addRecipe.setText("수정")
         binding.materialToolbar2.title = "수정"
 

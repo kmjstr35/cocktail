@@ -37,7 +37,6 @@ class AddCockTail : ComponentActivity() {
         binding.materialToolbar2.title = "나만의 레시피"
 
         // note : startActivityForResult api is deprecated
-        // and android documentation highly recommend to use registerForActivityResult api
         // https://developer.android.com/training/basics/intents/result
         mediaPicker = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
             if(uri != null) {
@@ -60,15 +59,13 @@ class AddCockTail : ComponentActivity() {
             val base = binding.addBaseTxt.text.toString()
 
 
-            // TODO : do not validate inputs manually. use validator api instead.
-
             if (name == "" || desc == "" || recipe == "" || base == "") {
                 val toast = Toast(this)
                 toast.duration = Toast.LENGTH_SHORT
                 toast.setText("입력하지 않은 필드가 있습니다")
                 toast.show()
             } else {
-                // use coroutine for prevent blocking on main thread
+                // 코루틴 쓴 부분 & glide
                 CoroutineScope(Dispatchers.IO).launch {
                     var path: String? = null
 
